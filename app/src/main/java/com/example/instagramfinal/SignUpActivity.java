@@ -21,7 +21,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     private EditText edtSignUpUsername, edtSignUpEmail, edtSignUpPassword;
     private Button btnSingUp;
-    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +89,7 @@ public class SignUpActivity extends AppCompatActivity {
                         Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
+                        finish();
                     }
                 });
         AlertDialog ok = builder.create();

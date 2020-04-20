@@ -34,6 +34,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnSignUpActivity = findViewById(R.id.btnSignUpActivity);
         btnSignUpActivity.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
+        if (ParseUser.getCurrentUser()!=null){
+            Intent intent = new Intent(LoginActivity.this,SocialMediaActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
     }
 
